@@ -16,11 +16,11 @@ public class SimpleHttpServer {
 		try {
 			// 1. Create Server Socket
 			serverSocket = new ServerSocket();
-			   
+
 			// 2. Bind
 			// String localhost = InetAddress.getLocalHost().getHostAddress();
 			String localhost = "0.0.0.0";
-			serverSocket.bind( new InetSocketAddress( localhost, PORT ) );
+			serverSocket.bind(new InetSocketAddress(localhost, PORT));
 			consolLog("bind " + localhost + ":" + PORT);
 
 			while (true) {
@@ -46,6 +46,6 @@ public class SimpleHttpServer {
 	}
 
 	public static void consolLog(String message) {
-		System.out.println("[HttpServer#" + Thread.currentThread().getId()  + "] " + message);
+		System.out.println("[HttpServer#" + Thread.currentThread().getId() + "] " + message);
 	}
 }
